@@ -1,0 +1,125 @@
+{% extends 'frontend/base.html' %} {% block title %}Contract {% endblock %} {% block content %}
+<div class="jumbotron">
+    <h1 class="display-3">Random pages</h1>
+
+    <hr class="my-2">
+    <p>please fill in this form</p>
+    <p>random number program</p>
+    <div class="container">
+
+        <form>
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th> กรอกค่าของตัวเลข </th>
+
+                    </tr>
+                </thead>
+
+                <tr>
+                    <td>min</td>
+                    <td> <input type="text" id="minnumber" placeholder="กรอกตัวเลขเท่านั้น"></td>
+
+
+                </tr>
+                <td>max</td>
+                <td><input type="text" id="maxnumber" placeholder="กรอกตัวเลขเท่านั้น"></td>
+
+                <tr>
+                    <td></td>
+                    <td><button onclick="validateForm()" class="btn btn-success">Try it</button></td>
+
+                </tr>
+
+
+
+
+                <script>
+                    function validateForm() {
+
+                        var x = document.getElementById("minnumber").value;
+                        // if (x == 3) {
+                        //     alert("Name must be filled out");
+                        //     return false;
+                        // }
+
+                        var y = document.getElementById("maxnumber").value;
+                        // if (y == 100) {
+                        //     alert("the mobile number must be filled out");
+                        //     return false;
+                        alert(x);
+                        alert(y);
+                        // }
+                        var min = x;
+                        var max = y;
+                        var output = Random(min, max);
+                        alert(output);
+                    }
+
+                    function Random(min_val, max_val) {
+                        return Math.floor((Math.random() * max_val) + min_val);
+                    }
+                </script>
+            </table>
+
+        </form>
+    </div>
+    <!-- </table>
+      
+    <form>
+        <table border="5" align="center" bordercolor="cyan" bgcolor="yellow">
+            <th>
+                <tr>
+                    <td>min</td>
+                    <td>
+                        <input type="text" id="minnumber" placeholder="กรอกตัวเลขเท่านั้น">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>max</td>
+                    <td><input type="text" id="maxnumber" placeholder="กรอกตัวเลขเท่านั้น"></td>
+
+                    <tr>
+                        <td><button onclick="validateForm()">Try it</button></td>
+
+                    </tr>
+
+
+            </th>
+
+            <script>
+                function validateForm() {
+
+                    var x = document.getElementById("minnumber").value;
+                    // if (x == 3) {
+                    //     alert("Name must be filled out");
+                    //     return false;
+                    // }
+
+                    var y = document.getElementById("maxnumber").value;
+                    // if (y == 100) {
+                    //     alert("the mobile number must be filled out");
+                    //     return false;
+                    alert(x);
+                    alert(y);
+                    // }
+                    var min = x;
+                    var max = y;
+                    var output = Random(min, max);
+                    alert(output);
+                }
+
+                function Random(min_val, max_val) {
+                    return Math.floor((Math.random() * max_val) + min_val);
+                }
+            </script> -->
+    <!-- </table>
+
+    </form> -->
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+    </p>
+</div>
+{% endblock %}

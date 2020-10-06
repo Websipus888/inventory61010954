@@ -1,0 +1,97 @@
+{% extends 'frontend/base.html' %} {% block title %}about {% endblock %} {% block content %}
+<div class="jumbotron">
+    <h1 class="display-3">Signup</h1>
+    <p class="lead">please enter your range of number</p>
+    <form action="page.cgi" method="post" name="form1" onsubmit="return validateForm()">
+        <table border="5" align="left" bordercolor="cyan" bgcolor="pink">
+            <th>
+                <tr>
+                    <td>name</td>
+                    <td>
+                        <input type="text" name="membername" placeholder="กรอกชื่อากุลเท่านั้น" id="membername">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>mobile</td>
+                    <td><input type="text" name="telephone" id="telephone" placeholder="08xxxxxxxx"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email" placeholder="example@hotmail.com">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        age
+                    </td>
+                    <td>
+                        <input type="text" name="age" id="age" placeholder="กรุณาใส่อายุด้วย">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><input type="radio" name="sex" value="male">ชาย
+
+                        <input type="radio" name="sex" value="female">หญิง</td>
+                </tr>
+                <tr>
+                    <td>Interest</td>
+                    <td><input type="checkbox" name="hobby" value="football"> news <br>
+                        <input type="checkbox" name="hobby" value="basketball">Game <br>
+                        <input type="checkbox" name="hobby" value="football"> Fashion <br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Description</td>
+                    <td><textarea rows="2" cols="20" name="tord"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input class="btn btn-primary btn-lg" type="submit" value="submit">
+
+                        <!-- <p class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</p> -->
+
+                    </td>
+                </tr>
+
+
+            </th>
+
+            <script>
+                function validateForm() {
+                    var x = document.forms["form1"]["membername"].value;
+                    if (x == "") {
+                        alert("Name must be filled out");
+                        return false;
+                    }
+                    var y = document.forms["form1"]["telephone"].value;
+                    if (y == "") {
+                        alert("the mobile number must be filled out");
+                        return false;
+                    } else if (isNaN(document.form1.telephone.value))
+
+                    {
+                        alert('Please input Number only.');
+                        return false;
+                    }
+                    var fname = document.getElementById("age").value;
+
+                    if (fname.length >= 2) {
+
+
+
+                        alert("ใส่เลขแค่ 2 ตัวเท่านั้น");
+
+                    }
+
+                }
+            </script>
+        </table>
+    </form>
+    <p class="lead">
+        <!-- <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a> -->
+    </p>
+</div>
+{% endblock %}

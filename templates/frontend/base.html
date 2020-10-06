@@ -3,6 +3,12 @@
 <html lang="en">
 
 <head>
+    <style>
+        body {
+            /*  ประกาศสี backgorund*/
+            background-color: #B7F3A7;
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
@@ -26,6 +32,12 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="{%url 'contract'%}">Contract <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{%url 'signup'%}">Signup <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{%url 'random'%}">Time to random <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
