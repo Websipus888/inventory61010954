@@ -1,8 +1,19 @@
-{% extends 'frontend/base.html' %} {% block title %}about {% endblock %} {% block content %}
+ {% extends 'frontend/base.html' %}{% load static %} {% block title %}about {% endblock %} {% block content %}
 <div class="jumbotron">
     <h1 class="display-3">Signup</h1>
-    <p class="lead">please sign up your information</p>
-    <form action="page.cgi" method="post" name="form1" onsubmit="return validateForm()">
+    <p class="lead">fiils this form to keep with me</p>
+    <form>
+        <label for="fname"> Name:</label><br>
+        <input type="text" id="fname" name="fname" placeholder="fills your name"><br>
+        <label for="lname">Phone Number:</label><br>
+        <input type="text" id="lname" name="lname" placeholder="Phone number">
+    </form>
+    <p>
+        <img style="width: 500px; height: 500px;" alt="Image description" src="{% static 'images/fan.jpg'%}" />
+    </p>
+
+
+    <!-- <form action="page.cgi" method="post" name="form1" onsubmit="return validateForm()">
         <table border="5" align="left" bordercolor="cyan" bgcolor="pink">
             <th>
                 <tr>
@@ -53,42 +64,42 @@
 
                         <!-- <p class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</p> -->
 
-                    </td>
-                </tr>
+    </td>
+    </tr>
 
 
-            </th>
+    </th>
 
-            <script>
-                function validateForm() {
-                    var x = document.forms["form1"]["membername"].value;
-                    if (x == "") {
-                        alert("Name must be filled out");
-                        return false;
-                    }
-                    var y = document.forms["form1"]["telephone"].value;
-                    if (y == "") {
-                        alert("the mobile number must be filled out");
-                        return false;
-                    } else if (isNaN(document.form1.telephone.value))
+    <script>
+        function validateForm() {
+            var x = document.forms["form1"]["membername"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            var y = document.forms["form1"]["telephone"].value;
+            if (y == "") {
+                alert("the mobile number must be filled out");
+                return false;
+            } else if (isNaN(document.form1.telephone.value))
 
-                    {
-                        alert('Please input Number only.');
-                        return false;
-                    }
-                    var fname = document.getElementById("age").value;
+            {
+                alert('Please input Number only.');
+                return false;
+            }
+            var fname = document.getElementById("age").value;
 
-                    if (fname.length >= 2) {
+            if (fname.length >= 2) {
 
 
 
-                        alert("ใส่เลขแค่ 2 ตัวเท่านั้น");
+                alert("ใส่เลขแค่ 2 ตัวเท่านั้น");
 
-                    }
+            }
 
-                }
-            </script>
-        </table>
+        }
+    </script>
+    </table>
     </form>
     <p class="lead">
         <!-- <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a> -->
